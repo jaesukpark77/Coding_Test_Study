@@ -1,11 +1,13 @@
 from collections import deque
+import sys
+f = sys.stdin.readline
 
-n, m, k, x = map(int, input().split())
+n, m, k, x = map(int, f().split())
 
 graph = [[] for _ in range(n+1)]
 
 for _ in range(m):
-  a, b = map(int, input().split())
+  a, b = map(int, f().split())
   graph[a].append(b)
 
 distance = [-1] * (n+1)
