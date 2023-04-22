@@ -9,6 +9,6 @@ def solution(priorities, location):
       turn += 1
       if job[0] == location:
         break
-  return printer
+  return turn
 
 print(solution([2, 1, 3, 2], 2))
