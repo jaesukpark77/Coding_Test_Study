@@ -1,3 +1,5 @@
+# 문제 링크 : https://www.codetree.ai/missions/5/problems/the-capabilities-of-the-development-team?utm_source=clipboard&utm_medium=text
+
 import math
 
 INT_MAX = math.inf
