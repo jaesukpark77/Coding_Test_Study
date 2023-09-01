@@ -8,7 +8,7 @@ a, b, x, y = map(int, input().split())
 
 min_dist = INT_MAX
 
-min_dist = min(min_dist, abs(b - 1))
+min_dist = min(min_dist, abs(b - a))
 min_dist = min(min_dist, abs(x - a) + abs(b - y))
 min_dist = min(min_dist, abs(y - a) + abs(b - x))
 
