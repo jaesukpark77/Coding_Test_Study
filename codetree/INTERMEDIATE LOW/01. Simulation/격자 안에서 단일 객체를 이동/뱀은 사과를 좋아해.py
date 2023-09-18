@@ -37,11 +37,11 @@ def move_snake(nx, ny):
 
         if not push_front((nx, ny)):
             return False
-        else:
-            pop_back()
+    else:
+        pop_back()
 
-            if not push_front((nx, ny)):
-                return False
+        if not push_front((nx, ny)):
+            return False
 
     return True
 
