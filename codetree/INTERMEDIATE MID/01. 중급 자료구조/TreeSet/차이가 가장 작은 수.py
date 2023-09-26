@@ -6,14 +6,13 @@ from sortedcontainers import SortedSet
 INT_MAX = math.inf
 
 n, m = map(int, input().split())
-arr = list(int(input()) for _ in range(n))
+arr = [int(input()) for _ in range(n)]
 
-s = SortedSet()
+s = SortedSet(arr)
 ans = INT_MAX
 
 for x in arr:
-    min_idx = s.bisect_left(m+x)
-
+    min_idx = s.bisect_left(m + x)
     if min_idx != len(s):
         ans = min(ans, s[min_idx] - x)
 
