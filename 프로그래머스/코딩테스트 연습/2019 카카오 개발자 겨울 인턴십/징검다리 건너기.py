@@ -14,7 +14,7 @@ def solution(stones, k):
             if t - mid <= 0:
                 cnt += 1
             else:
-                cnt = 0
+                cnt = 0 # 0이 연속적으로 나오지않았으면 다시 초기화 진행
                 
             if cnt >= k:
                 break
@@ -25,5 +25,3 @@ def solution(stones, k):
             left = mid + 1
             
     return left
-        
-    return answer
