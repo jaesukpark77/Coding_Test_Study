@@ -8,18 +8,19 @@ n = int(input())
 curr_x, curr_y = map(int, input().split())
 a = [[0 for _ in range(n+1)] for _ in range(n+1)]
 
-# 미로 탈출이 불가능한지 여부를 판단하기 위해
-# 동일한 위치에 동일한 방향으로 진행했던 적이 있는지를
-# 표시해주는 배열입니다.
+# 미로 탈출이 불가능한지 여부를 판단하기 위해 동일한 위치에 동일한 방향으로 진행했던 적이 있는지를 표시해주는 배열입니다.
 visited = [[[False for _ in range(DIR_NUM)] for _ in range(n + 1)] for _ in range(n+1)]
 
 elasped_time = 0
 
+# 처음에는 우측 방향을 바라보고 시작합니다.
 curr_dir = 0
 
+# 범위가 격자 안에 들어가는지 확인합니다.
 def in_range(x, y):
     return 1 <= x and x <= n and 1 <= y and y <= n
 
+# 해당 위치에 벽이 있으면 이동이 불가합니다.
 def wall_exist(x,y):
     return in_range(x, y) and a[x][y] == '#'
 
